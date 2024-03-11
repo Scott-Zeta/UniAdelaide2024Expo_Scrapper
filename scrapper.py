@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-def scrap(url):
+def scrape(url):
     try:
         page = requests.get(url)
         page.raise_for_status()  # Raises an HTTPError for bad responses
