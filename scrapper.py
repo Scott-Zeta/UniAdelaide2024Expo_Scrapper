@@ -10,10 +10,11 @@ def scrape(url):
 
         main_content = soup.find("main")
         if main_content is None:
-            print("No <main> element found.")
-            return []
+            print(f"No <main> element found. For {url}")
+            body = soup.find_all(["h1", "h2", "h3", "p","li"])
+            return body
 
-        body = main_content.find_all(["h1", "h2", "h3", "p"])
+        body = main_content.find_all(["h1", "h2", "h3", "p","li"])
         
         # for tag in body:
         #     print(tag.text.strip())

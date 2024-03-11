@@ -11,7 +11,7 @@ def main():
 
     try:
         urls = []
-        with open(f"{filepath}/site_map.txt", 'r') as file:
+        with open(f"{filepath}/site_map", 'r') as file:
             for line in file:
               line = line.strip()
               urls = map(line)
