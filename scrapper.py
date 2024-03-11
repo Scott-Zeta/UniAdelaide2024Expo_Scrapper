@@ -15,8 +15,8 @@ def scrape(url):
 
         body = main_content.find_all(["h1", "h2", "h3", "p"])
         
-        for tag in body:
-            print(tag.text.strip())
+        # for tag in body:
+        #     print(tag.text.strip())
 
         return body
 
@@ -27,4 +27,4 @@ def scrape(url):
         print(f"An unexpected error occurred: {e}")
         return []
 
-scrap("https://chamonix.com.au/consulting-service/")
+# scrape("https://chamonix.com.au/consulting-service/")

@@ -22,8 +22,8 @@ def map(sitemap_url):
       print(f"An unexpected error occurred: {e}")
           
 
-  print(urls)
+  # print(urls)
   # Now, urls contains all the URLs found in the sitemap
-  return url
+  return urls
 
-map("https://chamonix.com.au/page-sitemap1.xml")
+# map("https://chamonix.com.au/page-sitemap1.xml")
