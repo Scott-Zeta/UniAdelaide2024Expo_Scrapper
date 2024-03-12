@@ -26,20 +26,20 @@ def scrape(url):
             body = []
             if soup.find("div",class_="text"):
                 # This only appeared in citadelsecurities site, with no main element, content is inside div
-                body = soup.find("div",class_="text").find_all(["h1", "h2", "h3", "p","li","div"])
+                body = soup.find("div",class_="text").find_all(["h1", "h2", "h3", "p","li","div","table"])
             elif soup.find("div",role="main"):
                 # This only appeared in Flinders Port Holdings, they don't use the footer elements,
                 # and have an addtional mobile menu at the bottom, but not mark as nav or header
-                body = soup.find("div",role="main").find_all(["h1", "h2", "h3", "p","li"])
+                body = soup.find("div",role="main").find_all(["h1", "h2", "h3", "p","li","table"])
             elif soup.find("div",class_="main"):
                 # This is only for GPAEngneering, I would say they are much better than others
-                body = soup.find("div",class_="main").find_all(["h1", "h2", "h3", "p","li"])
+                body = soup.find("div",class_="main").find_all(["h1", "h2", "h3", "p","li","table"])
             else:
                 # Common case
-                body = soup.find_all(["h1", "h2", "h3", "p","li"])
+                body = soup.find_all(["h1", "h2", "h3", "p","li","table"])
             return body
 
-        body = main_content.find_all(["h1", "h2", "h3", "p","li"])
+        body = main_content.find_all(["h1", "h2", "h3", "p","li","table"])
 
         return body
 
@@ -51,9 +51,8 @@ def scrape(url):
         return []
 
 def test():
-    url = "https://www.flindersportholdings.com.au/graduate-program/"
+    url = "https://tbhconsultancy.com/experience/airport-link-northern-busway/"
     body = scrape(url)
     for tag in body:
         print(tag.text.strip())
-
-# test()
+        
