@@ -1,20 +1,20 @@
-2024-03-12 13:14:52,377 - INFO - Scraping page-sitemap1...
-2024-03-12 13:14:56,099 - ERROR - Request error: 404 Client Error: Not Found for url: https://chamonix.com.au/home-old/
-2024-03-12 13:14:57,759 - WARNING - No <main> element found. For https://chamonix.com.au/careers/
-2024-03-12 13:15:06,059 - ERROR - Request error: 404 Client Error: Not Found for url: https://chamonix.com.au/early-careers-program/traineeship-program/
-2024-03-12 13:15:06,487 - ERROR - Request error: 404 Client Error: Not Found for url: https://chamonix.com.au/early-careers-program/internship-program/
-2024-03-12 13:15:07,121 - ERROR - Request error: 404 Client Error: Not Found for url: https://chamonix.com.au/early-careers-program/graduate-program/
-2024-03-12 13:15:08,048 - INFO - Scraping jobpost-sitemap1...
-2024-03-12 13:15:08,325 - WARNING - No <main> element found. For https://chamonix.com.au/careers/senior-business-analyst/
-2024-03-12 13:15:08,537 - WARNING - No <main> element found. For https://chamonix.com.au/careers/sharepoint-powerapps-consultant/
-2024-03-12 13:15:08,743 - WARNING - No <main> element found. For https://chamonix.com.au/careers/project-manager/
-2024-03-12 13:15:09,018 - WARNING - No <main> element found. For https://chamonix.com.au/careers/multiple-positions-available-now/
-2024-03-12 13:15:09,268 - WARNING - No <main> element found. For https://chamonix.com.au/careers/solution-architect/
-2024-03-12 13:15:09,559 - WARNING - No <main> element found. For https://chamonix.com.au/careers/sharepoint-specialist/
-2024-03-12 13:15:09,874 - WARNING - No <main> element found. For https://chamonix.com.au/careers/cloud-services-consultant/
-2024-03-12 13:15:10,154 - WARNING - No <main> element found. For https://chamonix.com.au/careers/azure-integration-developer/
-2024-03-12 13:15:10,408 - WARNING - No <main> element found. For https://chamonix.com.au/careers/microsoft-365-consultant/
-2024-03-12 13:15:10,415 - INFO - Scraping jobpost_category-sitemap1...
-2024-03-12 13:15:13,693 - INFO - Scraping jobpost_job_type-sitemap1...
-2024-03-12 13:15:13,969 - INFO - Scraping jobpost_location-sitemap1...
-2024-03-12 13:15:14,202 - INFO - Finish Scrapping in: 30.806354999542236 seconds.
+2024-03-12 15:33:38,958 - INFO - Scraping page-sitemap1...
+2024-03-12 15:33:46,225 - ERROR - Request error: 404 Client Error: Not Found for url: https://chamonix.com.au/home-old/
+2024-03-12 15:33:48,715 - WARNING - No <main> element found. For https://chamonix.com.au/careers/
+2024-03-12 15:34:06,479 - ERROR - Request error: 404 Client Error: Not Found for url: https://chamonix.com.au/early-careers-program/traineeship-program/
+2024-03-12 15:34:06,884 - ERROR - Request error: 404 Client Error: Not Found for url: https://chamonix.com.au/early-careers-program/internship-program/
+2024-03-12 15:34:07,505 - ERROR - Request error: 404 Client Error: Not Found for url: https://chamonix.com.au/early-careers-program/graduate-program/
+2024-03-12 15:34:09,553 - INFO - Scraping jobpost-sitemap1...
+2024-03-12 15:34:10,260 - WARNING - No <main> element found. For https://chamonix.com.au/careers/senior-business-analyst/
+2024-03-12 15:34:10,871 - WARNING - No <main> element found. For https://chamonix.com.au/careers/sharepoint-powerapps-consultant/
+2024-03-12 15:34:11,518 - WARNING - No <main> element found. For https://chamonix.com.au/careers/project-manager/
+2024-03-12 15:34:12,093 - WARNING - No <main> element found. For https://chamonix.com.au/careers/multiple-positions-available-now/
+2024-03-12 15:34:12,724 - WARNING - No <main> element found. For https://chamonix.com.au/careers/solution-architect/
+2024-03-12 15:34:13,337 - WARNING - No <main> element found. For https://chamonix.com.au/careers/sharepoint-specialist/
+2024-03-12 15:34:13,952 - WARNING - No <main> element found. For https://chamonix.com.au/careers/cloud-services-consultant/
+2024-03-12 15:34:14,565 - WARNING - No <main> element found. For https://chamonix.com.au/careers/azure-integration-developer/
+2024-03-12 15:34:15,181 - WARNING - No <main> element found. For https://chamonix.com.au/careers/microsoft-365-consultant/
+2024-03-12 15:34:15,186 - INFO - Scraping jobpost_category-sitemap1...
+2024-03-12 15:34:21,119 - INFO - Scraping jobpost_job_type-sitemap1...
+2024-03-12 15:34:21,621 - INFO - Scraping jobpost_location-sitemap1...
+2024-03-12 15:34:21,825 - INFO - Finish Scrapping in: 44.410873889923096 seconds.

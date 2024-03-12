@@ -18,7 +18,13 @@ def scrape(url):
         main_content = soup.find("main")
         if main_content is None:
             logging.warning(f"No <main> element found. For {url}")
-            body = soup.find_all(["h1", "h2", "h3", "p","li"])
+            body = []
+            if soup.find("div",class_="text"):
+                # This only appeared in citadelsecurities site, with no main element, content is inside div
+                body = soup.find("div",class_="text").find_all(["h1", "h2", "h3", "p","li","div"])
+            else:
+                # Common case
+                body = soup.find_all(["h1", "h2", "h3", "p","li"])
             return body
 
         body = main_content.find_all(["h1", "h2", "h3", "p","li"])
@@ -32,4 +38,9 @@ def scrape(url):
         logging.error(f"An unexpected error occurred: {e}")
         return []
 
-# scrape("https://chamonix.com.au/consulting-service/")
+def test():
+    url = "https://www.citadelsecurities.com/careers/details/trading-fundamental-analyst-summer-internship-2025-us/"
+    body = scrape(url)
+    for tag in body:
+        print(tag.text.strip())
+        
