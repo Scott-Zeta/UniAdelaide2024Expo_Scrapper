@@ -12,7 +12,8 @@ def scrape(url):
         soup = BeautifulSoup(page.content, "html.parser")
         
         # clean the elements not needed
-        for unwanted_section in soup.select('header, footer, nav, .sidebar'):
+        for unwanted_section in soup.select('header, footer, nav, .sidebar, div.menu_nav'):
+            # div.menu_nav As the Fultonhogan use div to build everything, include a horrible collapsible menu can take the entire page
             unwanted_section.decompose()
         # print(soup.prettify())
         main_content = soup.find("main")
