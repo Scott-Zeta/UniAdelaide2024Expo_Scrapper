@@ -14,7 +14,7 @@ def scrape(url):
         # clean the elements not needed
         for unwanted_section in soup.select('header, footer, nav, .sidebar'):
             unwanted_section.decompose()
-        
+        # print(soup.prettify())
         main_content = soup.find("main")
         if main_content is None:
             logging.warning(f"No <main> element found. For {url}")
@@ -22,6 +22,10 @@ def scrape(url):
             if soup.find("div",class_="text"):
                 # This only appeared in citadelsecurities site, with no main element, content is inside div
                 body = soup.find("div",class_="text").find_all(["h1", "h2", "h3", "p","li","div"])
+            elif soup.find("div",role="main"):
+                # This only appeared in Flinders Port Holdings, they don't use the footer elements,
+                # and have an addtional mobile menu at the bottom, but not mark as nav or header
+                body = soup.find("div",role="main").find_all(["h1", "h2", "h3", "p","li"])
             else:
                 # Common case
                 body = soup.find_all(["h1", "h2", "h3", "p","li"])
@@ -39,8 +43,9 @@ def scrape(url):
         return []
 
 def test():
-    url = "https://www.citadelsecurities.com/careers/details/trading-fundamental-analyst-summer-internship-2025-us/"
+    url = "https://www.flindersportholdings.com.au/graduate-program/"
     body = scrape(url)
     for tag in body:
         print(tag.text.strip())
-        
+
+# test()
