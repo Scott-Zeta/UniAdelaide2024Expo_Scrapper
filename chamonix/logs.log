@@ -1,0 +1,15 @@
+2024-03-12 12:35:50,167 - ERROR - Request error: 404 Client Error: Not Found for url: https://chamonix.com.au/home-old/
+2024-03-12 12:35:51,736 - WARNING - No <main> element found. For https://chamonix.com.au/careers/
+2024-03-12 12:35:58,154 - ERROR - Request error: 404 Client Error: Not Found for url: https://chamonix.com.au/early-careers-program/traineeship-program/
+2024-03-12 12:35:58,588 - ERROR - Request error: 404 Client Error: Not Found for url: https://chamonix.com.au/early-careers-program/internship-program/
+2024-03-12 12:35:59,205 - ERROR - Request error: 404 Client Error: Not Found for url: https://chamonix.com.au/early-careers-program/graduate-program/
+2024-03-12 12:36:00,252 - WARNING - No <main> element found. For https://chamonix.com.au/careers/senior-business-analyst/
+2024-03-12 12:36:00,437 - WARNING - No <main> element found. For https://chamonix.com.au/careers/sharepoint-powerapps-consultant/
+2024-03-12 12:36:00,630 - WARNING - No <main> element found. For https://chamonix.com.au/careers/project-manager/
+2024-03-12 12:36:00,813 - WARNING - No <main> element found. For https://chamonix.com.au/careers/multiple-positions-available-now/
+2024-03-12 12:36:01,003 - WARNING - No <main> element found. For https://chamonix.com.au/careers/solution-architect/
+2024-03-12 12:36:01,192 - WARNING - No <main> element found. For https://chamonix.com.au/careers/sharepoint-specialist/
+2024-03-12 12:36:01,370 - WARNING - No <main> element found. For https://chamonix.com.au/careers/cloud-services-consultant/
+2024-03-12 12:36:01,557 - WARNING - No <main> element found. For https://chamonix.com.au/careers/azure-integration-developer/
+2024-03-12 12:36:01,748 - WARNING - No <main> element found. For https://chamonix.com.au/careers/microsoft-365-consultant/
+2024-03-12 12:36:04,211 - INFO - Finish Scrapping in: 18.78987717628479 seconds.

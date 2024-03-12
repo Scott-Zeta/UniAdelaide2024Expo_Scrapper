@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import logging
 
 def scrape(url):
     try:
@@ -10,22 +11,19 @@ def scrape(url):
 
         main_content = soup.find("main")
         if main_content is None:
-            print(f"No <main> element found. For {url}")
+            logging.warning(f"No <main> element found. For {url}")
             body = soup.find_all(["h1", "h2", "h3", "p","li"])
             return body
 
         body = main_content.find_all(["h1", "h2", "h3", "p","li"])
-        
-        # for tag in body:
-        #     print(tag.text.strip())
 
         return body
 
     except requests.exceptions.RequestException as e:
-        print(f"Request error: {e}")
+        logging.error(f"Request error: {e}")
         return []
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+        logging.error(f"An unexpected error occurred: {e}")
         return []
 
 # scrape("https://chamonix.com.au/consulting-service/")

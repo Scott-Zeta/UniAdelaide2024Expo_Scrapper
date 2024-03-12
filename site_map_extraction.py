@@ -1,5 +1,6 @@
 import requests
 import xml.etree.ElementTree as ET
+import logging
 
 def map_sitemap(sitemap_index):
     sitemap_urls = []
@@ -37,11 +38,11 @@ def map_urls(sitemap_xmls):
                 value.append(loc.text)
         urls[key] = value
     except requests.exceptions.RequestException as e:
-        print(f"Request error: {e}")
+        logging.error(f"Request error: {e}")
     except ET.ParseError as e:
-        print(f"XML parsing error: {e}")
+        logging.error(f"XML parsing error: {e}")
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+        logging.error(f"An unexpected error occurred: {e}")
           
   return urls
 
