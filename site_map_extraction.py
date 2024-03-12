@@ -4,15 +4,21 @@ import logging
 
 def map_sitemap(sitemap_index):
     sitemap_urls = []
+    
     try:
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
         }
         response = requests.get(sitemap_index,headers=headers)
         response.raise_for_status()  # Raises an HTTPError for bad responses
-        sitemap_index_xml = ET.fromstring(response.content)
+        root = ET.fromstring(response.content)
         
-        for sitemap in sitemap_index_xml.findall(".//{http://www.sitemaps.org/schemas/sitemap/0.9}sitemap"):
+        # single sitemap without index case, found in SIG site
+        if root.tag.endswith("urlset"):
+            sitemap_urls.append(sitemap_index)
+            return sitemap_urls
+        
+        for sitemap in root.findall(".//{http://www.sitemaps.org/schemas/sitemap/0.9}sitemap"):
             loc = sitemap.find("{http://www.sitemaps.org/schemas/sitemap/0.9}loc")
             if loc is not None:
                 sitemap_urls.append(loc.text)
@@ -58,7 +64,8 @@ def map(sitemap_index):
     return urls
 
 def test():
-    urls = map("https://chamonix.com.au/sitemap.xml")
+    urls = map("https://www.sig.com/sitemap.xml")
     for key, value in urls.items():
         print((key, value))
         print(len(value))
+        
