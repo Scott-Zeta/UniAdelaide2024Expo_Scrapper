@@ -21,6 +21,15 @@ def main():
            sitemap_index = file.readline().strip()
         urls = map(sitemap_index)
         
+        #index
+        for key, value in urls.items():
+            with open(f"{filepath}/index.txt", 'a') as file:
+                file.write(f"{key}: {len(value)} Entries\n")
+                for url in value:
+                    file.write(f"{url}\n")
+                file.write("\n")
+        
+        #scraping        
         for key, value in urls.items():
             outputname = key
             logging.info(f"Scraping {outputname}...")
