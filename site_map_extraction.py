@@ -17,11 +17,11 @@ def map_sitemap(sitemap_index):
             if loc is not None:
                 sitemap_urls.append(loc.text)
     except requests.exceptions.RequestException as e:
-        print(f"Request error: {e}")
+        logging.error(f"Request error: {e}")
     except ET.ParseError as e:
-        print(f"XML parsing error: {e}")
+        logging.error(f"XML parsing error: {e}")
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+        logging.error(f"An unexpected error occurred: {e}")
     return sitemap_urls
 
 def map_urls(sitemap_xmls):
