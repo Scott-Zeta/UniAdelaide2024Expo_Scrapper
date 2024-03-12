@@ -23,6 +23,7 @@ def main():
         
         for key, value in urls.items():
             outputname = key
+            logging.info(f"Scraping {outputname}...")
             with open(f"{filepath}/{outputname}.txt", 'a') as file:
                     for url in value:
                         reuslt = scrape(url)
