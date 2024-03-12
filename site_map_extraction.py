@@ -5,7 +5,10 @@ import logging
 def map_sitemap(sitemap_index):
     sitemap_urls = []
     try:
-        response = requests.get(sitemap_index)
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+        response = requests.get(sitemap_index,headers=headers)
         response.raise_for_status()  # Raises an HTTPError for bad responses
         sitemap_index_xml = ET.fromstring(response.content)
         
@@ -25,7 +28,10 @@ def map_urls(sitemap_xmls):
   urls = {}
   for sitemap in sitemap_xmls:
     try:
-        response = requests.get(sitemap)
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+        }
+        response = requests.get(sitemap,headers=headers)
         response.raise_for_status()  # Raises an HTTPError for bad responses
         sitemap_xml = ET.fromstring(response.content)
 
