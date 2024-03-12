@@ -27,6 +27,9 @@ def scrape(url):
                 # This only appeared in Flinders Port Holdings, they don't use the footer elements,
                 # and have an addtional mobile menu at the bottom, but not mark as nav or header
                 body = soup.find("div",role="main").find_all(["h1", "h2", "h3", "p","li"])
+            elif soup.find("div",class_="main"):
+                # This is only for GPAEngneering, I would say they are much better than others
+                body = soup.find("div",class_="main").find_all(["h1", "h2", "h3", "p","li"])
             else:
                 # Common case
                 body = soup.find_all(["h1", "h2", "h3", "p","li"])
