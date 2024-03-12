@@ -1,4 +1,4 @@
-from map_site_extraction import map
+from site_map_extraction import map
 from scrapper import scrape
 import sys
 
