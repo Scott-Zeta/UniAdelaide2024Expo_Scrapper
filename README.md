@@ -8,7 +8,7 @@ When I am suffering from browsing company's websites, I suddenly was given this 
 
 ## Why build this?
 
-Many people keep telling me should do research on those employeer, understand their so called "value", "culture". However I don't like to read business bullshit. So it records info might "useful" by traversal the sitemap. And wait for further analysis, whatever from machine or human.
+Many people keep telling me should do research on those employeer, understand their so called "value", "culture". However I don't like to read business phrase. So it records info might be "useful" by traversal the sitemap. And wait for further analysis, whatever from machine or human.
 
 ## How to use it?
 
