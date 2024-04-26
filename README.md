@@ -20,3 +20,35 @@ Many people keep telling me should do research on those employeer, understand th
 
 1. Many sites has non-standard page structure, so might need to modify the code for specific case. Or it might fetch plenty of useless info like header/footer or other duplicate elements.
 2. Records structure currently are plain text. If more data cleaning/processing needs, perhaps a better data structure needed like json. However this isn't what I can consider in such a temperory solution.
+
+## Environment
+
+### Create Env
+
+```bash
+python -m venv env
+```
+
+### Activate the Env
+
+```bash
+source env/bin/activate
+```
+
+### Install from Env
+
+```bash
+pip install -r requirements.txt
+```
+
+### Export Env
+
+```bash
+pip freeze > requirements.txt
+```
+
+### Deactivate Env
+
+```bash
+deactivate
+```
